@@ -50,5 +50,16 @@ A package to provide type definitions for react router dom when used with typesc
 
 ```npm i -D @types/react-dom```
 
-When installing it no package is getting installed it may be because the recent version of react router got updated to work with out this package -- need to look in to this
+When installing it no package is getting installed it may be because the recent version of react router got updated to work without this package -- need to look in to this
+
+### 2. ESlint Configuration
+
+we already installed the ESlint extenstion from visual studio market place but we need initialize the configuration. On general we can initialize it to the  create react apps default configuration using the following command
+
+```npm i -D eslint eslint-config-react-app```
+
+### 3. @types/node
+A package to provide type definitions for NodeJS when used with typescript
+
+```npm i -D @types/node```
 
