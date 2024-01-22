@@ -63,3 +63,6 @@ A package to provide type definitions for NodeJS when used with typescript
 
 ```npm i -D @types/node```
 
+## Note
+1. For the intellisense to work properly we need to set the "module resolution" option in the "tsconfig.json" and "tsconfig.node.json" to "Node"
+
