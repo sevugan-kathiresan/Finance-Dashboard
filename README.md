@@ -63,6 +63,14 @@ A package to provide type definitions for NodeJS when used with typescript
 
 ```npm i -D @types/node```
 
+## Redux ToolKit WorkFlow
+1. Create a file "api.ts" -> responsible for creating our endpoints for api calls
+2. Configuring store in main.tsx file
+
 ## Note
 1. For the intellisense to work properly we need to set the "module resolution" option in the "tsconfig.json" and "tsconfig.node.json" to "Node"
+
+2. In order for the .env variable to be detected -> in tsconf.json/compileroptions-> target and module should be "ESNext".
+
+3. In the main.tsx -> to use createRoot instead of importing it as ReactDom directly import createRoot as named import.
 
