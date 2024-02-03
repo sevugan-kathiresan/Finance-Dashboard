@@ -67,10 +67,35 @@ A package to provide type definitions for NodeJS when used with typescript
 1. Create a file "api.ts" -> responsible for creating our endpoints for api calls
 2. Configuring store in main.tsx file
 
+## Backend Installations
+### 1. Express
+### 2. body-parser
+To handle information coming from the body of the request
+### 3. cors
+### 4. dotenv
+To handle environment variables
+### 5. helmet
+Api end point security
+### 6. morgan
+for handling console logs
+### 7. mongoose, mongoose-currency (not installed because its outdated)
+
+## Backend Dev Dependencies
+### 1. nodemon
+
+
 ## Note
 1. For the intellisense to work properly we need to set the "module resolution" option in the "tsconfig.json" and "tsconfig.node.json" to "Node"
 
 2. In order for the .env variable to be detected -> in tsconf.json/compileroptions-> target and module should be "ESNext".
 
 3. In the main.tsx -> to use createRoot instead of importing it as ReactDom directly import createRoot as named import.
+
+4. If you want to use the import syntax to import modules in backend we need to include the below key value pair in package.json of the server
+    ```"type": "module"```
+5. We need to add the scripts to run the backend in the package.json, under the scripts section
+    To run as a develoment server
+    ```"dev":"nodemon index.js"```
+    To run normally
+    ```"start" : "node index.js"```
 
