@@ -37,7 +37,7 @@ mongoose
         /* ADD data one time only then comment the below two lines of code */
         // await mongoose.connection.db.dropDatabase(); // since we are manually seeding the data we need to drop the existing database before everytime we start or server otherwise we will end up with duplicate data
         // KPI.insertMany(kpis);
-        Product.insertMany(products);
+        // Product.insertMany(products);
     })
     .catch((error) => console.log(`${error} did not connect`))
 
