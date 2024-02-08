@@ -8,9 +8,11 @@ import morgan from "morgan";
 
 import kpiRoutes from "./routes/kpi.js"; //importing our routes (note in nodejs we need to specify .js but in case of react not needed)
 import productRoutes from "./routes/product.js";
+import transactionRoutes from "./routes/transaction.js";
 import Product from "./models/Product.js";
 import KPI from "./models/KPI.js";
-import { kpis, products } from "./data/data.js";
+import Transaction from "./models/Transaction.js";
+import { kpis, products, transactions } from "./data/data.js";
 
 /* CONFIGURATION */
 dotenv.config();
@@ -26,6 +28,7 @@ app.use(cors());
 /* ROUTES */
 app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
+app.use("/transaction", transactionRoutes);
 
 /* Mongoose Setup*/
 const PORT = process.env.PORT || 9000;
@@ -38,6 +41,7 @@ mongoose
         // await mongoose.connection.db.dropDatabase(); // since we are manually seeding the data we need to drop the existing database before everytime we start or server otherwise we will end up with duplicate data
         // KPI.insertMany(kpis);
         // Product.insertMany(products);
+        Transaction.insertMany(transactions);
     })
     .catch((error) => console.log(`${error} did not connect`))
 

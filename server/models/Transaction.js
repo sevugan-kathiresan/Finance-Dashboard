@@ -4,9 +4,8 @@ const Schema = mongoose.Schema;
 
 const TransactionSchema = new Schema({
     buyer: {
-        type: Number,
-        get: (value) => value.toFixed(2),
-        set: (value) => parseFloat(value.replace('$', ''))
+        type: String,
+        required: true,
     },
     amount: {
         type: Number,

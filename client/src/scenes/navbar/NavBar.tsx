@@ -1,12 +1,9 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Box, Typography, useTheme } from "@mui/material";
 import FlexBetween from "@/components/FlexBetween";
 import PixIcon from '@mui/icons-material/Pix';
 
 const Navbar = () => {
     const {palette} = useTheme(); // Let's us use theme we created in the App.tsx file
-    const [seleteced, setSelected] = useState("dashboard")
     return (
         <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300]}>
             {/* LEFT SIDE */}
@@ -19,14 +16,7 @@ const Navbar = () => {
             {/* RIGHT SIDE */}
             <FlexBetween gap="2rem">
                 <Box sx={{"&:hover": {color: palette.primary[100]}}}>
-                    <Link to="/" onClick={()=>setSelected("dashboard")} style={{color: seleteced === "dashboard" ? "inherit" : palette.grey[700], textDecoration:"inherit"}}>
-                        Dashboard
-                    </Link>
-                </Box>
-                <Box sx={{"&:hover": {color: palette.primary[100]}}}>
-                    <Link to="/predictions" onClick={()=>setSelected("predictions")} style={{color: seleteced === "predictions" ? "inherit" : palette.grey[700], textDecoration:"inherit"}}>
-                        Predictions
-                    </Link>
+                    Dashboard
                 </Box>
             </FlexBetween>
         </FlexBetween>
